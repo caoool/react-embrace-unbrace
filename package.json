@@ -13,7 +13,20 @@
     "test": "react-app-rewired test"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "plugins": [
+      "react-pug"
+    ],
+    "extends": [
+      "react-app"
+    ],
+    "rules": {
+      "react-pug/empty-lines": 2,
+      "react-pug/indent": 2,
+      "react-pug/no-broken-template": 2,
+      "react-pug/no-undef": 2,
+      "react-pug/quotes": 2,
+      "react-pug/uses-react": 2
+    }
   },
   "browserslist": [
     ">0.2%",
@@ -27,6 +40,7 @@
     "coffee-loader": "^0.9.0",
     "coffeescript": "^2.3.2",
     "customize-cra": "^0.2.8",
+    "eslint-plugin-react-pug": "^0.5.6",
     "react-app-rewired": "^1.6.2"
   }
 }

@@ -6,7 +6,7 @@ const {
 
 const coffeeRegex = /\.coffee$/
 
-const addCoffeeScriptSupport = () => config => {
+const addCoffeeScriptAndPugSupport = () => config => {
   const rules = config.module.rules.find(rule => Array.isArray(rule.oneOf)).oneOf
   rules.unshift({
     test: coffeeRegex,
@@ -16,6 +16,7 @@ const addCoffeeScriptSupport = () => config => {
         options: { 
           transpile: {
             "plugins": [
+              'transform-react-pug',
               ["@babel/plugin-transform-react-jsx", {
                 "pragma": "React.createElement",
                 "pragmaFrag": "React.Fragment",
@@ -37,7 +38,7 @@ const addCoffeeScriptToTest = () => config => {
 
 module.exports = {
   webpack: override(
-    addCoffeeScriptSupport()
+    addCoffeeScriptAndPugSupport()
   ),
   jest: override(
     addCoffeeScriptToTest()
