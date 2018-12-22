@@ -32,8 +32,10 @@ const addCoffeeScriptAndPugSupport = () => config => {
 }
 
 const addCoffeeScriptToTest = () => config => {
-  console.log(JSON.parse(JSON.stringify(config).replace(/js,jsx,ts,tsx/g, 'js,jsx,ts,tsx,coffee')))
-  return JSON.parse(JSON.stringify(config).replace(/js,jsx,ts,tsx/g, 'js,jsx,ts,tsx,coffee'))
+  const newConfig = JSON.parse(JSON.stringify(config).replace(/js,jsx,ts,tsx/g, 'js,jsx,ts,tsx,coffee'))
+  newConfig.moduleFileExtensions.push('coffee')
+  newConfig.transform = Object.assign({'^.+\\.coffee$': '<rootDir>/config/jestCoffeePreprocessor.js'}, newConfig.transform)
+  return newConfig
 }
 
 module.exports = {
