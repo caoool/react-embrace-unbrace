@@ -4,13 +4,15 @@ const {
   watchAll
 } = require('customize-cra')
 
-const { addCoffeePugSupport } = require('./config/webpack')
+const {
+  addCoffeePugSupport,
+  addStylusSupport } = require('./config/webpack')
 const { addCoffeeSupport } = require('./config/jest')
-console.log(addCoffeeSupport)
 
 module.exports = {
   webpack: override(
-    addCoffeePugSupport()
+    addCoffeePugSupport(),
+    addStylusSupport()
   ),
   jest: override(
     addCoffeeSupport()
