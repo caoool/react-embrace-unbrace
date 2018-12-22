@@ -36,7 +36,7 @@
   ],
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.2.0",
-    "babel-plugin-transform-react-pug": "^6.0.1",
+    "babel-plugin-transform-react-pug-coffee": "^6.0.1",
     "coffee-loader": "^0.9.0",
     "coffeescript": "^2.3.2",
     "customize-cra": "^0.2.8",

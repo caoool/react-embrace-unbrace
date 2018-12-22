@@ -1583,10 +1583,10 @@ babel-plugin-transform-object-rest-spread@^6.26.0:
     babel-plugin-syntax-object-rest-spread "^6.8.0"
     babel-runtime "^6.26.0"
 
-babel-plugin-transform-react-pug@^6.0.1:
+babel-plugin-transform-react-pug-coffee@^6.0.1:
   version "6.0.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-pug/-/babel-plugin-transform-react-pug-6.0.1.tgz#2c29ed3267c741418973d703856a241d10e2edc4"
-  integrity sha512-elJZBavh4sEO0kn7rmg8ot+mJrPN982RQoloDNAAvg/cygKXwhX0yiAqnxtf4CZVbOOhXnmKT5BlQlKsDu6mpw==
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-pug-coffee/-/babel-plugin-transform-react-pug-coffee-6.0.1.tgz#702969b26cbd11158e34aa24993543b3204acbca"
+  integrity sha512-Q2SnG64s6sEj6+htxuQXD6jfrnxLD5GfHcb1D2VrJ+nqrZJQdBcaaCQKe1IthKt6TchHCNJtvJh5RyreT65UnA==
   dependencies:
     babylon "6.18.0"
     common-prefix "^1.1.0"

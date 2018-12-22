@@ -16,7 +16,7 @@ const addCoffeeScriptAndPugSupport = () => config => {
         options: { 
           transpile: {
             "plugins": [
-              'transform-react-pug',
+              'transform-react-pug-coffee',
               ["@babel/plugin-transform-react-jsx", {
                 "pragma": "React.createElement",
                 "pragmaFrag": "React.Fragment",
